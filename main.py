@@ -55,6 +55,7 @@ def main():
     # 7. Agregar un hecho desde Python y consultarlo
     prolog.assertz("progenitor(carlos, diego)")
     prolog.assertz("hombre(diego)")
+    prolog.assertz("mujer(andrea)")
     nietos_maria = [r["N"] for r in prolog.query("abuelo(maria, N)")]
     print(f"Nietos de maria (tras agregar a diego): {nietos_maria}")
 
